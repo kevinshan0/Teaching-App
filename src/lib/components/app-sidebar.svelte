@@ -13,14 +13,17 @@
       {
         title: "Dashboard",
         icon: House,
+        href: '/',
       },
       {
         title: "Inbox",
         icon: Inbox,
+        href: '/inbox',
       },
       {
         title: "Calendar",
         icon: Calendar,
+        href: 'calendar',
       },
     ];
 
@@ -48,7 +51,7 @@
                         <Sidebar.MenuItem>
                             <Sidebar.MenuButton>
                                 {#snippet child({ props })}
-                                    <a href="/{item.title.toLocaleLowerCase()}" {...props}>
+                                    <a href={item.href} {...props}>
                                         <item.icon/>
                                         <span>{item.title}</span>
                                     </a>
